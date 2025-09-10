@@ -1,0 +1,18 @@
+import capos.* 
+describe "campos De batalla"{
+
+
+method initialize() {
+    rolando.tamañoMochila(3)
+    rolando.mochila().addAll([espadaDelDestino, collarDivino, armaduraDeAceroValyrio])
+}
+test "ejemplo de batalla"{
+    assert.equals(19,rolando.poderTotal())
+    rolando.batallar()
+    assert.equals(18,rolando.poderTotal())
+     rolando.batallar()
+    assert.equals(21.5,rolando.poderTotal())
+        rolando.batallar()
+    assert.equals(24,rolando.poderTotal())
+}
+}
