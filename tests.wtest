@@ -1,0 +1,36 @@
+import capos.* 
+describe "campos De batalla"{
+
+
+method initialize() {
+    rolando.tamañoMochila(3)
+    rolando.mochila().addAll([espadaDelDestino, collarDivino, armaduraDeAceroValyrio])
+}
+test "ejemplo de batalla"{
+    assert.equals(19,rolando.poderTotal())
+    rolando.batallar()
+    assert.equals(18,rolando.poderTotal())
+     rolando.batallar()
+    assert.equals(21.5,rolando.poderTotal())
+        rolando.batallar()
+    assert.equals(24,rolando.poderTotal())
+}
+
+}
+
+test "libro De Hechizos"{
+    libroDeHechizos.aprenderHechizo(bendicion)
+    libroDeHechizos.aprenderHechizo(invisibilidad)
+    libroDeHechizos.aprenderHechizo(invocación)
+     
+     rolando.mochila().add(libroDeHechizos)
+
+     castilloDePiedra.artefactos().addAll(#{espadaDelDestino, armaduraDeAceroValyrio, collarDivino})
+
+     assert.equals(4, libroDeHechizos.poder())
+     rolando.batallar()
+     assert.equals(6, libroDeHechizos.poder())
+     rolando.batallar()
+     assert.equals(7, libroDeHechizos.poder())
+
+    }
