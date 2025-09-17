@@ -15,4 +15,22 @@ test "ejemplo de batalla"{
         rolando.batallar()
     assert.equals(24,rolando.poderTotal())
 }
+
 }
+
+test "libro De Hechizos"{
+    libroDeHechizos.aprenderHechizo(bendicion)
+    libroDeHechizos.aprenderHechizo(invisibilidad)
+    libroDeHechizos.aprenderHechizo(invocación)
+     
+     rolando.mochila().add(libroDeHechizos)
+
+     castilloDePiedra.artefactos().addAll(#{espadaDelDestino, armaduraDeAceroValyrio, collarDivino})
+
+     assert.equals(4, libroDeHechizos.poder())
+     rolando.batallar()
+     assert.equals(6, libroDeHechizos.poder())
+     rolando.batallar()
+     assert.equals(7, libroDeHechizos.poder())
+
+    }

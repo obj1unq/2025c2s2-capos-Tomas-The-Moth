@@ -118,17 +118,17 @@ object libroDeHechizos {
   var dueño = rolando
   var utilización = 0
 
-const hechizos = []
+  const hechizos = []
 
 method dueño(){
     return dueño
 }
   method desgastarse(){
-    utilización = utilización + 1
+    hechizos.remove(hechizos.first())
   }
 //get(0)indice , first primer elemento, head (lo mismo)/ solo para la listas 
   method poder(){
-    return hechizos.first()
+    return hechizos.first().poder()
   }
 
     method aprenderHechizo(hechizo){
